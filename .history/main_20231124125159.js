@@ -13,7 +13,7 @@ function toCamelCase(str){
             }
           }
       }
-    return newStr.join('');
+    console.log(newStr);
 }   
 toCamelCase(str)
 

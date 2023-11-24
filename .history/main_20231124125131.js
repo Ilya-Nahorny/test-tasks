@@ -6,14 +6,14 @@ function toCamelCase(str){
     newStr = [];
     for (let i = 0; i < str.length; i++) {
         if (str[i] !== '-' && str[i] !== '_') {
-            if (str[i - 1] === '-' || str[i - 1] === '_') {
-                newStr.push(str[i].toUpperCase());
+            if (str[i + 1] === '-' || str[i + 1] === '_') {
+              arr.push(str[i].toUpperCase());
             } else {
-                newStr.push(str[i]);
+              arr.push(str[i]);
             }
           }
       }
-    return newStr.join('');
+    console.log(newStr);
 }   
 toCamelCase(str)
 

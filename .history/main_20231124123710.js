@@ -3,17 +3,14 @@
 const str = 'the-stealth-warrior';
 
 function toCamelCase(str){
-    newStr = [];
-    for (let i = 0; i < str.length; i++) {
-        if (str[i] !== '-' && str[i] !== '_') {
-            if (str[i - 1] === '-' || str[i - 1] === '_') {
-                newStr.push(str[i].toUpperCase());
-            } else {
-                newStr.push(str[i]);
-            }
-          }
-      }
-    return newStr.join('');
+    newStr = '';
+    for(let i = 0; i < str.length; i++){
+        if(str[i] === '-' || str[i] === '_'){
+            str[i+1] = str[i+1].toUpperCase();
+            newStr = newStr.push(str)
+        }
+    }
+    console.log(newStr);
 }   
 toCamelCase(str)
 
